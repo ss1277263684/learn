@@ -6,3 +6,20 @@
     -- let和const声明的范围是块作用域，且不会再作用域中被提升（暂时性死区），在全局作用域中声明的变量不会成为 window 对象的属性，
     -- var声明的范围是函数作用域，由于声明会被提升，JavaScript 引擎会自动将多余的声明在作用域顶部合并为一个声明。
     -- const声明变量时必须同时初始化变量，尝试修改 const 声明的变量会导致运行时错误。
+
+3、ES6语法你平常能用到哪些？
+    -- let和const
+    -- 解构赋值
+    --- 函数和参数
+        -- 箭头函数
+        -- 参数默认值
+        -- rest参数
+    --- 内置函数
+        -- 扩展运算符
+        -- Array.from()
+        -- find()和findindex()
+        -- includes()
+        -- includes(), startsWith(), endsWith()
+        -- repeat()
+    -- 新增对象Set
+    
