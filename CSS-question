@@ -1,0 +1,10 @@
+1、两种盒模型分别说明下
+    -- IE盒模型
+        -- 在早期的IE浏览器中，IE5及以下甚至包括IE6，在混杂模式中，使用自己的非标准盒模型。
+        -- 总宽度=定义的width+定义的margin
+        -- 在CSS3中，新增了box-sizing属性，通过box-sizing属性设置为border-box使用这种IE盒模型
+    -- W3C标准盒模型
+        -- 盒模型的总宽度为：margin+padding+border+定义的width
+        -- 在CSS3中，新增的box-sizing的默认属性content-box，即设置为W3C标准盒模型
+
+2、如何垂直居中？

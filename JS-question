@@ -1,0 +1,8 @@
+1、JS有哪几种数据类型
+    -- Undefined,Null,Number,String,Boolean,Symbol以及Object（复杂数据类型）
+
+2、变量声明提升？let、var、const的区别？
+    -- 使用var声明变量，变量会自动提升到作用域顶部，为赋值时为undefined；
+    -- let和const声明的范围是块作用域，且不会再作用域中被提升（暂时性死区），在全局作用域中声明的变量不会成为 window 对象的属性，
+    -- var声明的范围是函数作用域，由于声明会被提升，JavaScript 引擎会自动将多余的声明在作用域顶部合并为一个声明。
+    -- const声明变量时必须同时初始化变量，尝试修改 const 声明的变量会导致运行时错误。

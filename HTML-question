@@ -1,0 +1,40 @@
+1、 DTD(Document Type Definition)的作用是什么？
+    什么是怪异现象？
+    什么是标准模式？
+    二者有什么差异（举例）？
+    产生的历史原因是什么？
+    使用时需要注意什么？    
+
+    --文档规范与呈现模式
+        -- 页面中的作用
+            -- 一组机器可读的规则
+            -- 是对HTML文档声明，还会影响浏览器的渲染模式（工作模式）
+        -- 规定XML或HTML中的标签和语法
+            -- HTML4.01 规定了三种文档类型：Strict、Transitional、Frameset
+            -- XHTML1.0 规定了三种XML文档类型：Strict、Transitional、Frameset
+            -- HTML5 只规定了一种文档类型：<!DOCTYPE HTML>
+        -- 会影响浏览器的渲染模式
+            -- 浏览器的渲染模式：
+                -- 标准模式（严格模式，Standards mode 或者 Strict mode）: 浏览器按W3C标准解析执行代码
+                -- 混杂模式（怪异模式，Quirks mode）：使用浏览器自己的方式解析执行代码; 对页面的处理方式永久冻结在IE5.5，主要体现盒模型的差异
+                    -- 标准模式和怪异模式的区别:
+                        -- width不同：在怪异模式中：width则是元素的实际宽度
+                        -- 内联元素的尺寸：在怪异模式下，给span等行内元素设置width和height却会生效
+                        -- 用margin : 0 auto设置水平居中：在怪异模式下，无效
+                        -- 怪异模式下设置图片的padding会失效
+                        -- 怪异模式下table中的字体属性不能继承上层的设置
+                        -- 元素溢出的处理
+                -- 近似标准模式（又叫准标准模式，Almost Stands Mode）
+            -- DTD的不同导致渲染模式的不同
+                -- XHTML文档包含形式完整的DOCTYPE，一般以标准模式呈现。
+                -- HTML4.01文档，包含严格DTD的文档，一般也以标准模式呈现。
+                -- 含过渡DTD和URI的DOCTYPE，一般以标准模式呈现。
+                -- 含过渡DTD但没有URI的DOCTYPE，会以混杂模式呈现。
+                -- DOCTYPE不存在或不正确会导致HTML和XHTML文档以混杂模式呈现。
+
+2、HTML5是什么？
+    有那些新特性？
+    新增哪些语义化标签？
+    新增哪些表单元素？
+    和h5有啥关系？
+    
