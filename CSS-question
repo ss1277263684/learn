@@ -8,3 +8,8 @@
         -- 在CSS3中，新增的box-sizing的默认属性content-box，即设置为W3C标准盒模型
 
 2、如何垂直居中？
+    -- 弹性布局，侧轴居中
+    -- line-height与height保持一致
+    -- display: table-cell 和 vertical-align: middle
+    -- positioin: absolute 和 margin-top
+    -- 顶部和底部的padding设置同样高度
