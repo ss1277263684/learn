@@ -66,3 +66,65 @@ new MyPromise((resolve, reject) => {
     }, val => {
         console.log('reject', val);
     })
+
+/*
+    2、自定义迭代器
+*/ 
+class Counter {
+    constructor(limit) {
+        this.count = 1;
+        this.limit = limit
+    }
+
+    next() {
+        if (this.count <= this.limit) {
+            return {done: false, value: this.count++};
+        } else {
+            return {done: true, value: undefined};
+        }
+    }
+    [Symbol.iterator]() {
+        return this;
+    }
+}
+class Counter1 {
+    constructor(limit) {
+        this.limit = limit
+    }
+
+    next() {
+        if (this.count <= this.limit) {
+            return {done: false, value: this.count++};
+        } else {
+            return {done: true, value: undefined};
+        }
+    }
+    [Symbol.iterator]() {
+        let count = 1, limit = this.limit;
+        return {
+            next() {
+                if (count <= limit) {
+                    return {done: false, value: count++}
+                } else {
+                    return {done: true, value: undefined}
+                }
+            }
+        }
+    }
+}
+
+let counter = new Counter(3)
+for (let i of counter) {
+    console.log("11",i)
+}
+for (let i of counter) {
+    console.log("11",i)
+}
+
+let counter1 = new Counter1(3)
+for (let i of counter1) {
+    console.log("22",i)
+}
+for (let i of counter1) {
+    console.log("22",i)
+}
