@@ -1,13 +1,13 @@
-1、JS有哪几种数据类型
+1、 JS有哪几种数据类型
     -- Undefined,Null,Number,String,Boolean,Symbol以及Object（复杂数据类型）
 
-2、变量声明提升？let、var、const的区别？
+2、 变量声明提升？let、var、const的区别？
     -- 使用var声明变量，变量会自动提升到作用域顶部，为赋值时为undefined；
     -- let和const声明的范围是块作用域，且不会再作用域中被提升（暂时性死区），在全局作用域中声明的变量不会成为 window 对象的属性，
     -- var声明的范围是函数作用域，由于声明会被提升，JavaScript 引擎会自动将多余的声明在作用域顶部合并为一个声明。
     -- const声明变量时必须同时初始化变量，尝试修改 const 声明的变量会导致运行时错误。
 
-3、ES6语法你平常能用到哪些？
+3、 ES6语法你平常能用到哪些？
     -- let和const
     -- 解构赋值
     --- 函数和参数
@@ -23,7 +23,7 @@
         -- repeat()
     -- 新增对象Set
 
-4、undefined和null有什么区别？
+4、 undefined和null有什么区别？
     --  null是一个表示"无"的对象，转为数值时为0；undefined是一个表示"无"的原始值，转为数值时为NaN
     --  null表示"没有对象"，即该处不应该有值
         --  作为函数的参数，表示该函数的参数不是对象。
@@ -34,7 +34,7 @@
         --  对象没有赋值的属性，该属性的值为undefined。
         --  函数没有返回值时，默认返回undefined。
 
-5、Promise、Promise.all、Promise.race 分别怎么用？
+5、 Promise、Promise.all、Promise.race 分别怎么用？
     --  function fn() {
             return new Promise((resolve, reject) => {
                 resolve(val)    // 成功时调用
@@ -46,3 +46,11 @@
         用将多个Promise实例包装成一个新的Promise实例, 只有promise1和promise2都成功才会调用success
     --  Promise.race([promise1, promise2]).then(success, fail)  
         用将多个Promise实例包装成一个新的Promise实例, 只要promise1和promise2有一个成功就会调用success
+
+6、 解析this
+    --  默认绑定会把this绑定到全局对象
+    --  函数被调用的位置有上下文，或者是该函数的引用地址是不是被某个对象的属性引用，
+        并通过对象的属性直接运行该函数。如果出现上述的情况，就会触发this的隐式绑定，
+        this就会被绑定成当前对象
+    --  隐式绑定丢失
+    --  显示绑定：call、apply绑定
