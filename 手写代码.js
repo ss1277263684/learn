@@ -128,3 +128,44 @@ for (let i of counter1) {
 for (let i of counter1) {
     console.log("22",i)
 }
+
+
+/**
+ * 3、手写函数防抖和函数节流
+ */
+function debounce(callback, wait) {
+    let timer = null;
+
+    return function() {
+        let context = this;
+        let agrs = arguments;
+
+        if (timer) {
+            clearTimeout(timer)
+        }
+        console.log('start');
+        timer = setTimeout(function() {
+            callback.apply(context, agrs)
+        }, wait)
+    }
+}
+
+let debounceFn = debounce(function(a, b) {
+    console.log(a)
+}, 1000) 
+debounceFn('first')
+setTimeout(function() {debounceFn('second')}, 500)
+
+function throttle(fn, wait) {
+    let timer;
+
+    return () => {
+        if (timer) {
+            return; 
+        }
+        timer = setTimeout(() => {
+            fn();
+            timer = null;
+        }, wait)
+    }
+}
